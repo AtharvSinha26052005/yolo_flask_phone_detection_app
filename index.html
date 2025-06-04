@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YOLOv8 Phone Detection</title>
+</head>
+<body>
+    <h2>Upload an image to detect phones</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <input type="submit">
+    </form>
+    {% if user_image %}
+        <h3>Result:</h3>
+        <img src="{{ user_image }}" style="max-width:500px;">
+    {% endif %}
+</body>
+</html>
